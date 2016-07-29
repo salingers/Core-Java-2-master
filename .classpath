@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="week1/1-DebuggingFun/DebuggingFun/src"/>
+	<classpathentry kind="src" path="week2/2-Exceptions/week2/src"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="week6/1-Multithreading/Additional multithreading/src">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="week6/1-Multithreading/MultiWebCrawler"/>
+	<classpathentry kind="src" path="week6/1-Multithreading/WebCrawler/src"/>
+	<classpathentry kind="src" path="week6/2-Multithreading/WaitNotifyMechanism/src"/>
+	<classpathentry kind="src" path="week7/1-Java8/Java8Problems/src"/>
+	<classpathentry kind="lib" path="week1/1-DebuggingFun/DebuggingFun/libs/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="week5/1-Servlets-Tomcat/rome-1.0.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/fluent-hc-4.4.1.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/httpclient-4.4.1.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/httpclient-cache-4.4.1.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/httpclient-win-4.4.1.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/httpmime-4.4.1.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="week6/1-Multithreading/Additional multithreading/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
