@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="week1/1-DebuggingFun/DebuggingFun/src"/>
-	<classpathentry kind="src" path="week2/2-Exceptions/week2/src"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="week6/1-Multithreading/Additional multithreading/src">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

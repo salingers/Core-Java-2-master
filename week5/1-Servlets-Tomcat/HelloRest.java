@@ -18,56 +18,58 @@ import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
 @Path("/hello")
-public class HelloRest {
+public class HelloRest
+{
 	@GET
-	public String hello() {
+	public String hello()
+	{
 		return "Hello world @ " + new Date().toString();
 	}
-	
+
 	@POST
-	public String helloPost() {
+	public String helloPost()
+	{
 		return "Hello world post @ " + new Date().toString();
 	}
-	
+
 	@Path("/student")
 	@GET
 	@Produces("application/json")
-	public Student getStudent() {
+	public Student getStudent()
+	{
 		return new Student("ivan", "ivanov");
 	}
 }
 
 @Provider
 @Produces("application/json")
-class JSONBodyWriter implements MessageBodyWriter<Student> {
-	
-    @Override
-    public boolean isWriteable(Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
-        System.out.println("isWriteable called...");
-        return type == Student.class;
-    }
-  
-    @Override
-    public long getSize(Student myBool, Class<?> type, Type genericType,
-                        Annotation[] annotations, MediaType mediaType) {
-        // deprecated by JAX-RS 2.0 and ignored by Jersey runtime
-        return 0;
-    }
-  
-    
-    @Override
-    public void writeTo(Student st,
-                        Class<?> type,
-                        Type genericType,
-                        Annotation[] annotations,
-                        MediaType mediaType,
-                        MultivaluedMap<String, Object> httpHeaders,
-                        OutputStream entityStream)
-                        throws IOException, WebApplicationException {
-  
-        StringBuilder sb = new StringBuilder();
-        sb.append("{\"fn\":\"").append(st.getFn()).append("\",\"ln\":\"").append(st.getLn()).append("\"}");
-        DataOutputStream dos = new DataOutputStream(entityStream);
-        dos.writeUTF(sb.toString());
-    }
+class JSONBodyWriter implements MessageBodyWriter<Student>
+{
+
+	@Override
+	public boolean isWriteable(Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType)
+	{
+		System.out.println("isWriteable called...");
+		return type == Student.class;
+	}
+
+	@Override
+	public long getSize(Student myBool, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType)
+	{
+		// deprecated by JAX-RS 2.0 and ignored by Jersey runtime
+		return 0;
+	}
+
+	@Override
+	public void writeTo(Student st, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType,
+			MultivaluedMap<String, Object> httpHeaders, OutputStream entityStream)
+			throws IOException, WebApplicationException
+	{
+
+		StringBuilder sb = new StringBuilder();
+		sb.append("{\"fn\":\"").append(st.getFn()).append("\",\"ln\":\"").append(st.getLn()).append("\"}");
+		
+		DataOutputStream dos = new DataOutputStream(entityStream);
+		dos.writeUTF(sb.toString());
+	}
 }
